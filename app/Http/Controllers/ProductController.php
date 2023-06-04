@@ -18,6 +18,7 @@ class ProductController extends Controller
     public function show($slug)
     {
         $product = Product::where('slug', $slug)->first();
+        dd($product->categories->toArray());
         return view('products.show', ['product' => $product]);
     }
 }
