@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+
+    public function formatted_amount()
+    {
+        return 'RS' . $this->price / 100;
+    }
 }
