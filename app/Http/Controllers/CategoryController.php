@@ -9,7 +9,8 @@ class CategoryController extends Controller
 {
     public function get()
     {
-        $categories = Category::select('name', 'slug')->first()->get();
-        dd($categories[0]->toArray());
+        // $categories = Category::select('name', 'slug')->first()->get();
+        $categories = Category::all();
+        dd($categories->toArray());
     }
 }
