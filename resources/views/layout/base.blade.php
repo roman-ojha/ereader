@@ -155,7 +155,7 @@
                     <div class="header__cart">
                         <ul>
                             <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                            <li><a href="#"><i class="fa fa-shopping-bag"></i>
+                            <li><a href="/cart"><i class="fa fa-shopping-bag"></i>
                                     <span>{{ Cart::name('shopping')->getDetails()->get('items_count') }}</span></a>
                             </li>
                         </ul>

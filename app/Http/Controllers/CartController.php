@@ -20,4 +20,9 @@ class CartController extends Controller
         ]);
         return back();
     }
+
+    public function show(Request $request)
+    {
+        return view('cart');
+    }
 }
