@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->string('tracking_id')->unique();
+            $table->integer('total');
+            $table->string('full_name');
+            $table->string('email');
+            $table->string('phone_number');
+            $table->foreignId('billing_id')->constrained('addresses', 'id');
+            $table->foreignId('shipping_id')->constrained('addresses', 'id');
+            $table->foreignId('payment_id')->constrained('payments', 'id');
             $table->timestamps();
         });
     }

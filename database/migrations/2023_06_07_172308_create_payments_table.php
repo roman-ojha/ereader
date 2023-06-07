@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('payment_gateway_id')->constrained('payment_gateways', 'id');
+            $table->string('payment_status');
+            $table->integer('price_paid');
             $table->timestamps();
         });
     }
