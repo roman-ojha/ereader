@@ -110,7 +110,11 @@
                                         </td>
                                         <td class="shoping__cart__item__close" onclick="deleteCart('{{ $hash }}')">
                                             <span class="icon_close"></span>
-                                            <form method="POST" id="deleteForm-{{ $hash }}"></form>
+                                            <form method="POST" id="deleteForm-{{ $hash }}" action="/cart/remove">
+                                                @csrf
+                                                @method('DELETE')
+                                                <input type="hidden" name="itemHash" value="{{ $hash }}" />
+                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -161,6 +165,8 @@
             if (!userConfirmation) {
                 return;
             }
+            let form = $('#deleteForm-' + hash);
+            form.submit();
         }
     </script>
 @endsection

@@ -29,4 +29,9 @@ class CartController extends Controller
         $subTotal = $shoppingCart->getSubTotal();
         return view('cart', ['items' => $items, 'total' => $total, 'subTotal' => $subTotal]);
     }
+
+    public function delete(Request $request)
+    {
+        dd($request->all());
+    }
 }
