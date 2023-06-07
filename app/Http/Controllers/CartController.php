@@ -32,6 +32,9 @@ class CartController extends Controller
 
     public function delete(Request $request)
     {
-        dd($request->all());
+        $hash = $request->itemHash;
+        $shoppingCart = Cart::name('shopping');
+        $shoppingCart->removeItem($hash);
+        return back();
     }
 }
