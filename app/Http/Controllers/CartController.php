@@ -23,6 +23,10 @@ class CartController extends Controller
 
     public function show(Request $request)
     {
-        return view('cart');
+        $shoppingCart = Cart::name('shopping');
+        $items = $shoppingCart->getItems();
+        $total = $shoppingCart->getTotal();
+        $subTotal = $shoppingCart->getSubTotal();
+        return view('cart', ['items' => $items, 'total' => $total, 'subTotal' => $subTotal]);
     }
 }
