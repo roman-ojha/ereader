@@ -18,5 +18,17 @@ class CheckoutController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'country' => 'required',
+            'province' => 'required',
+            'district' => 'required',
+            'address' => 'required',
+            'payment_gateway' => 'required',
+        ]);
+        dd($request->all());
     }
 }
