@@ -106,8 +106,8 @@
                                 <div class="checkout__input__checkbox">
                                     <label for="payment">
                                         Cash on Delivery
-                                        <input type="radio" id="payment" name="payment_gateway" value="cash_on_delivery"
-                                            @if (old('payment_gateway') == 'cash_on_delivary') checked @endif />
+                                        <input type="radio" id="payment" name="payment_gateway" value="cod"
+                                            @if (old('payment_gateway') == 'cod') checked @endif />
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
