@@ -33,6 +33,7 @@ class CheckoutController extends Controller
             'district' => 'required',
             'address' => 'required',
             'payment_gateway' => 'required',
+            'zip' => 'required',
         ]);
         // Create Address
         $address = Address::create([
@@ -77,5 +78,7 @@ class CheckoutController extends Controller
         }
 
         $shoppingCart->destroy();
+
+        return redirect()->route('payment.show', ['paymentGateway' => $data['payment_gateway']]);
     }
 }
