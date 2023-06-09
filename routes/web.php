@@ -36,6 +36,7 @@ Route::delete('/cart/remove', [CartController::class, 'delete']);
 Route::get('/checkout', [CheckoutController::class, 'show']);
 Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.store');
 Route::get('/payment/{paymentGateway}', [PaymentController::class, 'show'])->name('payment.show');
+Route::get('/thankyou', [PaymentController::class, 'thankyou'])->name('thankyou');
 
 
 Route::get('/about', function () {
