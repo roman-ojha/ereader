@@ -143,8 +143,16 @@
                     <div class="">
                         <div class="hero__search__form">
                             <form action="#">
-                                <input type="text" placeholder="What do yo u need?">
-                                <button type="submit" class="site-btn">SEARCH</button>
+                                <input type="text" placeholder="Search Any book you want..."
+                                    style="border-radius: 20px 0px 0px 10px;">
+                                <button type="submit" class="site-btn"
+                                    style="margin-left: 10px;border-radius: 0px 8px 8px 0px;"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24">
+                                        <path fill="currentColor" fill-rule="evenodd"
+                                            d="M11 2a9 9 0 1 0 5.618 16.032l3.675 3.675a1 1 0 0 0 1.414-1.414l-3.675-3.675A9 9 0 0 0 11 2Zm-6 9a6 6 0 1 1 12 0a6 6 0 0 1-12 0Z"
+                                            clip-rule="evenodd" />
+                                    </svg></button>
                             </form>
                         </div>
                     </div>
@@ -162,7 +170,8 @@
                                         <span>{{ Cart::name('shopping')->getDetails()->get('items_count') }}</span></a>
                                 </li>
                                 item:
-                                <span>{{ Cart::name('shopping')->getDetails()->get('total') }}</span>
+                                {{-- <span>{{ Cart::name('shopping')->getDetails()->get('total') }}</span> --}}
+                                <span>{{ Cart::name('shopping')->getDetails()->get('items_count') }}</span>
 
                             </ul>
                         </div>
@@ -190,72 +199,6 @@
     @yield('content')
 
     <!-- Footer Section Begin -->
-    {{-- <footer class="footer spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-12">
-                    <div class="footer__widget">
-                        <h6>Join Our Newsletter Now</h6>
-                        <p>Get E-mail updates about our latest shop and special offers.</p>
-                        <form action="#">
-                            <input type="text" placeholder="Enter your mail">
-                            <button type="submit" class="site-btn">Subscribe</button>
-                        </form>
-                        <div class="footer__widget__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
-                    <div class="footer__widget">
-                        <h6>Useful Links</h6>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">About Our Shop</a></li>
-                            <li><a href="#">Secure Shopping</a></li>
-                            <li><a href="#">Delivery infomation</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#">Who We Are</a></li>
-                            <li><a href="#">Our Sitemap</a></li>
-                            <li><a href="#">Our Services</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Innovation</a></li>
-                            <li><a href="#">Testimonials</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="footer__about">
-                        <div class="header__logo" style="display: flex;">
-                            <span style="display: flex">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                                    viewBox="0 0 512 512">
-                                    <path fill="currentColor"
-                                        d="M202.24 74C166.11 56.75 115.61 48.3 48 48a31.36 31.36 0 0 0-17.92 5.33A32 32 0 0 0 16 79.9V366c0 19.34 13.76 33.93 32 33.93c71.07 0 142.36 6.64 185.06 47a4.11 4.11 0 0 0 6.94-3V106.82a15.89 15.89 0 0 0-5.46-12A143 143 0 0 0 202.24 74Zm279.68-20.7A31.33 31.33 0 0 0 464 48c-67.61.3-118.11 8.71-154.24 26a143.31 143.31 0 0 0-32.31 20.78a15.93 15.93 0 0 0-5.45 12v337.13a3.93 3.93 0 0 0 6.68 2.81c25.67-25.5 70.72-46.82 185.36-46.81a32 32 0 0 0 32-32v-288a32 32 0 0 0-14.12-26.61Z" />
-                                </svg>
-                                <p
-                                    style="font-size: 30px; color: rgb(20, 20, 75); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
-                                    Ereader</p>
-                            </span>
-                        </div>
-                        <ul>
-                            <li>Address: 60-49 Road 11378 New York</li>
-                            <li>Phone: +65 11.188.888</li>
-                            <li>Email: hello@colorlib.com</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer> --}}
-    <!-- Footer Section End -->
-    <!-- Remove the container if you want to extend the Footer to full width. -->
     <div class="">
         <!-- Footer -->
         <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
@@ -431,7 +374,7 @@
         <!-- Footer -->
 
     </div>
-    <!-- End of .container -->
+    <!-- Footer Section End -->
 
     <!-- Js Plugins -->
     <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>

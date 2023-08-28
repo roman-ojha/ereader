@@ -16,13 +16,6 @@
     <!-- Checkout Section Begin -->
     <section class="checkout spad"style="padding-bottom: 20px;padding-top: 40px">
         <div class="container">
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </div>
-            @endif
             <div class="checkout__form">
                 <h4>Billing Details</h4>
                 <form action="{{ route('checkout.store') }}" method="POST">
@@ -79,14 +72,14 @@
                                     </label>
                                 </div> --}}
                                 <div class="checkout__input__checkbox">
-                                    <label for="khalti">
+                                    <label for="khalti" hidden>
                                         Khalti
                                         <input type="radio" id="khalti" name="payment_gateway" value="khalti"
-                                            id="khalti" @if (old('payment_gateway') == 'khalti') checked @endif />
+                                            id="khalti" checked />
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
-                                <button type="submit" class="site-btn">PLACE ORDER</button>
+                                <button type="submit" class="site-btn" style="border-radius: 8px;">PLACE ORDER</button>
                             </div>
                         </div>
                     </div>

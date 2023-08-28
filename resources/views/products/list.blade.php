@@ -29,6 +29,10 @@
                 </div>
             </div>
             <div class="row" style="margin-bottom: 30px">
+                <div class="col-lg-9">
+                    <img src="{{ asset('img/books.jpg') }}" alt="" width="100%" height="100%"
+                        style="border-radius: 15px;">
+                </div>
                 <div class="col-lg-3 col-md-5">
                     <div class="sidebar">
                         <div class="sidebar__item">
@@ -43,10 +47,6 @@
                             </ul>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-9">
-                    <img src="{{ asset('img/books.jpg') }}" alt="" width="100%" height="100%"
-                        style="border-radius: 15px;">
                 </div>
                 {{-- <div class="hero__item set-bg col-lg-9" data-setbg="img/books.jpg">
                     <div class="hero__text">

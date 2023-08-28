@@ -47,7 +47,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="primary-btn">ADD TO CART</button>
+                            <button type="submit" class="primary-btn" style="border-radius: 8px;border-width: 0px;">ADD TO
+                                CART</button>
                         </form>
                     </div>
                 </div>
