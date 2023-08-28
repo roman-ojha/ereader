@@ -27,21 +27,21 @@ class CheckoutController extends Controller
             'first_name' => 'required',
             'last_name' => 'required',
             'email' => 'required|email',
-            'phone' => 'required',
+            // 'phone' => 'required',
             'country' => 'required',
-            'province' => 'required',
-            'district' => 'required',
-            'address' => 'required',
+            // 'province' => 'required',
+            // 'district' => 'required',
+            // 'address' => 'required',
             'payment_gateway' => 'required',
-            'zip' => 'required',
+            // 'zip' => 'required',
         ]);
         // Create Address
         $address = Address::create([
             'country' => $data['country'],
-            'province' => $data['province'],
-            'district' => $data['district'],
-            'street_address' => $data['address'],
-            'zipcode' => $data['zip'],
+            // 'province' => $data['province'],
+            // 'district' => $data['district'],
+            // 'street_address' => $data['address'],
+            // 'zipcode' => $data['zip'],
         ]);
         $paymentGateway = PaymentGateway::where('code', $data['payment_gateway'])->first();
         // Create Payment
@@ -61,9 +61,9 @@ class CheckoutController extends Controller
             'total' => $total,
             'full_name' => $data['first_name'] . " " . $data['last_name'],
             'email' => $data['email'],
-            'phone_number' => $data['phone'],
+            // 'phone_number' => $data['phone'],
             'billing_id' => $address->id,
-            'shipping_id' => $address->id,
+            // 'shipping_id' => $address->id,
             'payment_id' => $payment->id,
         ]);
 

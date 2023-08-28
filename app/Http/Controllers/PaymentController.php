@@ -47,5 +47,6 @@ class PaymentController extends Controller
             'transaction_id' => $data['transaction_id'],
         ]);
         // dd($orderPayment);
+        return redirect('/');
     }
 }
