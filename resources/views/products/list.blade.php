@@ -17,7 +17,7 @@
                     </div>
                     <div class="col-lg-4 col-md-4">
                         <div class="filter__found">
-                            <h6><span>{{ $products->count() }}</span> Products found</h6>
+                            <h6"><span>{{ $products->count() }}</span> Products found</h6>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-3">
@@ -67,7 +67,8 @@
                                 </div>
                             </a>
                             <div class="product__item__text">
-                                <h6><a href="/product/{{ $product->slug }}">{{ $product->name }}</a></h6>
+                                <h6><a href="/product/{{ $product->slug }}">{{ $product->name }}</a>
+                                </h6>
                                 <h5>{{ $product->formatted_amount() }}</h5>
                             </div>
                         </div>
