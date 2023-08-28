@@ -45,20 +45,27 @@
                     </div>
                 </div>
                 <div class="col-lg-9">
-                    <img src="{{ asset('img/books.jpg') }}" alt="" width="100%" height="100%">
+                    <img src="{{ asset('img/books.jpg') }}" alt="" width="100%" height="100%"
+                        style="border-radius: 15px;">
                 </div>
+                {{-- <div class="hero__item set-bg col-lg-9" data-setbg="img/books.jpg">
+                    <div class="hero__text">
+                        <span>FRUIT FRESH</span>
+                        <h2 style="color: white;">Vegetable <br />100% Organic</h2>
+                        <p style="color: white;">Free Pickup and Delivery Available</p>
+                        <a href="#" class="primary-btn">SHOP NOW</a>
+                    </div>
+                </div> --}}
             </div>
             <div class="row">
                 @foreach ($products as $product)
-                    <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpg">
-                                <ul class="product__item__pic__hover">
-                                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
-                            </div>
+                            <a href="/product/{{ $product->slug }}">
+                                <div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpg"
+                                    style="border-radius: 8px;">
+                                </div>
+                            </a>
                             <div class="product__item__text">
                                 <h6><a href="/product/{{ $product->slug }}">{{ $product->name }}</a></h6>
                                 <h5>{{ $product->formatted_amount() }}</h5>
@@ -66,12 +73,6 @@
                         </div>
                     </div>
                 @endforeach
-            </div>
-            <div class="product__pagination">
-                <a href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#"><i class="fa fa-long-arrow-right"></i></a>
             </div>
         </div>
         </div>
