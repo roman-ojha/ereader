@@ -28,7 +28,7 @@ Route::get('/login', [AuthController::class, 'login']);
 Route::get('/categories', [CategoryController::class, 'get']);
 
 Route::get('/home', [HomeController::class, 'index']);
-Route::get('/products', [ProductController::class, 'index']);
+Route::get('/', [ProductController::class, 'index']);
 Route::get('/product/{slug}', [ProductController::class, 'show']);
 Route::post('/cart', [CartController::class, 'add']);
 Route::get('/cart', [CartController::class, 'show']);
