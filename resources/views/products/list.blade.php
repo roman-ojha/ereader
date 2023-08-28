@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Product Section Begin -->
-    <section class="product spad">
+    <section class="product spad" style="padding-top: 0px;">
         <div class="container">
             <div class="filter__item">
                 <div class="row">
