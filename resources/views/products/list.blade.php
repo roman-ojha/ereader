@@ -61,7 +61,7 @@
                 @foreach ($products as $product)
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <a href="/product/{{ $product->slug }}">
+                            <a href="/book/{{ $product->slug }}">
                                 <div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpg"
                                     style="border-radius: 8px;">
                                 </div>

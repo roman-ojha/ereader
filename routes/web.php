@@ -27,9 +27,9 @@ Route::get('/', function () {
 Route::get('/login', [AuthController::class, 'login']);
 Route::get('/categories', [CategoryController::class, 'get']);
 
-Route::get('/home', [HomeController::class, 'index']);
+// Route::get('/home', [HomeController::class, 'index']);
 Route::get('/', [ProductController::class, 'index']);
-Route::get('/product/{slug}', [ProductController::class, 'show']);
+Route::get('/book/{slug}', [ProductController::class, 'show']);
 Route::post('/cart', [CartController::class, 'add']);
 Route::get('/cart', [CartController::class, 'show']);
 Route::delete('/cart/remove', [CartController::class, 'delete']);
