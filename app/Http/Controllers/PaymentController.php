@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
+use ZipArchive;
+use Illuminate\Support\Str;
 
 class PaymentController extends Controller
 {
@@ -47,6 +51,27 @@ class PaymentController extends Controller
             'transaction_id' => $data['transaction_id'],
         ]);
         // dd($orderPayment);
-        return redirect('/');
+        $headers = [
+            'Content-Type' => 'application/pdf',
+        ];
+        $filePath = storage_path('\app\public\books\book-1.pdf');
+        $filesToZip = [
+            $filePath,
+            $filePath,
+            // zip required pdf files
+        ];
+        $zip = new ZipArchive;
+        $zipFileName = 'Ereader-' . $data['transaction_id'] . '.zip';
+        $zipFilePath = storage_path("\\app\\temp\\" . $zipFileName);
+        if ($zip->open($zipFilePath, ZipArchive::CREATE | ZipArchive::OVERWRITE)) {
+            foreach ($filesToZip as $file) {
+                if (File::exists($file)) {
+                    $fileName = $file;
+                    $zip->addFile($file, basename(str_replace('.pdf', '', $file) . '-' . md5($file . Str::random(5)) . '.pdf'));
+                }
+            }
+            $zip->close();
+        }
+        return response()->download($zipFilePath, $zipFileName)->deleteFileAfterSend(true);
     }
 }

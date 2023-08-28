@@ -5,7 +5,8 @@
         "price": 650,
         "description": "",
         "quantity": 30,
-        "imageUrl": "https://m.media-amazon.com/images/I/51bMZ63tXrL.jpg"
+        "imageUrl": "https://m.media-amazon.com/images/I/51bMZ63tXrL.jpg",
+        "category": ""
     },
     {
         "name": "",
@@ -13,6 +14,7 @@
         "price": 650,
         "description": "",
         "quantity": 30,
-        "imageUrl": "https://m.media-amazon.com/images/I/51bMZ63tXrL.jpg"
+        "imageUrl": "https://m.media-amazon.com/images/I/51bMZ63tXrL.jpg",
+        "category": ""
     }
 ]
