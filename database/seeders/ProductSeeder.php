@@ -13,6 +13,23 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        Product::factory()->count(50)->create();
+        $filePath = storage_path('app/data/ebook.json');
+        if (file_exists($filePath)) {
+            $jsonData = file_get_contents($filePath);
+            $books = json_decode($jsonData, true);
+            foreach ($books as $key => $book) {
+                Product::create([
+                    'name' => $book['name'],
+                    'slug' => $book['slug'],
+                    'price' => $book['price'] * 100,
+                    'description' => $book['description'],
+                    'quantity' => $book['quantity'],
+                    'image_url' => $book['imageUrl'],
+                    'author' => fake()->name(),
+                    'page' => fake()->numberBetween(150, 500),
+                ]);
+            }
+        }
+        // Product::factory()->count(50)->create();
     }
 }

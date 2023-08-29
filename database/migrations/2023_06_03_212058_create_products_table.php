@@ -20,6 +20,9 @@ return new class extends Migration
             $table->mediumText('information')->nullable();
             $table->integer('quantity');
             $table->boolean('is_active')->default(true);
+            $table->string('image_url');
+            $table->string('author');
+            $table->integer('page');
             $table->timestamps();
         });
     }

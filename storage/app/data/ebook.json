@@ -288,15 +288,13 @@
         "category": "Romance"
     },
 
-    [
-        {
-            "name": "Hideaway Heart: An enemies to lovers, forced proximity small town romance (Cherry Tree Harbor Book 2)",
-            "slug": "hideaway-heart",
-            "price": 650,
-            "description": "Escape to the picturesque town of Cherry Tree Harbor and experience the tension, chemistry, and unexpected romance between two bitter rivals in \"Hideaway Heart.\" Dive into a heartwarming story of love, redemption, and second chances as old grudges give way to unexpected attraction.",
-            "quantity": 30,
-            "imageUrl": "https://m.media-amazon.com/images/I/51H1kVp5cfL.jpg",
-            "category": "Romance"
-        }
-    ]
+    {
+        "name": "Hideaway Heart: An enemies to lovers, forced proximity small town romance (Cherry Tree Harbor Book 2)",
+        "slug": "hideaway-heart",
+        "price": 650,
+        "description": "Escape to the picturesque town of Cherry Tree Harbor and experience the tension, chemistry, and unexpected romance between two bitter rivals in \"Hideaway Heart.\" Dive into a heartwarming story of love, redemption, and second chances as old grudges give way to unexpected attraction.",
+        "quantity": 30,
+        "imageUrl": "https://m.media-amazon.com/images/I/51H1kVp5cfL.jpg",
+        "category": "Romance"
+    }
 ]
