@@ -36,12 +36,12 @@
                 <div class="col-lg-3 col-md-5">
                     <div class="sidebar">
                         <div class="sidebar__item">
-                            <h4>Category</h4>
+                            <h4>Genre's</h4>
                             <ul>
                                 @foreach ($categories as $category)
                                     <li>
                                         <a class="{{ request()->getQueryString() == 'category=' . $category->slug ? 'text-primary' : '' }}"
-                                            href="/products?category={{ $category['slug'] }}">{{ $category['name'] }}</a>
+                                            href="?category={{ $category['slug'] }}">{{ $category['name'] }}</a>
                                     </li>
                                 @endforeach
                             </ul>

@@ -72,7 +72,7 @@
                             </div>
                             <div class="checkout__input @if ($errors->has('country')) invalid @endif">
                                 <p>Country<span>*</span></p>
-                                <input type="text" name="country" value="{{ old('country') }}" />
+                                <input value="nepal" type="text" name="country" value="{{ old('country') }}" />
                                 <small>{{ $errors->first('country') }}</small>
                             </div>
                             <div class="checkout__input @if ($errors->has('country')) invalid @endif">

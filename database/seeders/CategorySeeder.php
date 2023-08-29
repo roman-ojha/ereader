@@ -13,6 +13,19 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        Category::factory()->count(20)->create();
+        $genresPath = storage_path('app/data/genres.json');
+        if (file_exists($genresPath)) {
+            $genresData = file_get_contents($genresPath);
+            $genres = json_decode($genresData, true);
+            foreach ($genres as $key => $genre) {
+                Category::create([
+                    'name' => $genre['name'],
+                    'slug' => str()->slug($genre['name']),
+                    'description' => fake()->text(),
+                    'image_url' => fake()->imageUrl(),
+                ]);
+            }
+        }
+        // Category::factory()->count(20)->create();
     }
 }
