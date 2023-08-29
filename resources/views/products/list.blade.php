@@ -57,7 +57,7 @@
                     </div>
                 </div> --}}
             </div>
-            <div class="row">
+            <div id="product-details" class="row">
                 @foreach ($products as $product)
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">

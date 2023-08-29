@@ -55,13 +55,13 @@
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
                 <li class="active"><a href="./index.html">Home</a></li>
-                <li><a href="./shop-grid.html">Shop</a></li>
+                <li><a href="#product-details">Shop</a></li>
                 <li><a href="#">Pages</a>
                     <ul class="header__menu__dropdown">
-                        <li><a href="./shop-details.html">Shop Details</a></li>
-                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                        <li><a href="./checkout.html">Check Out</a></li>
-                        <li><a href="./blog-details.html">Blog Details</a></li>
+                        <li><a href="#">Shop Details</a></li>
+                        <li><a href="#">Shoping Cart</a></li>
+                        <li><a href="#">Check Out</a></li>
+                        <li><a href="#">Blog Details</a></li>
                     </ul>
                 </li>
                 <li><a href="./blog.html">Blog</a></li>
@@ -107,7 +107,7 @@
                         <ul>
                             <li class="active"><a href="/" style="color: #1c2331">Home</a>
                             </li>
-                            <li><a href="./shop-grid.html"style="color: white;">Shop</a></li>
+                            <li><a href="#product-details"style="color: white;">Shop</a></li>
                             {{-- <li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
                                     <li><a href="./shop-details.html">Shop Details</a></li>
@@ -116,8 +116,8 @@
                                     <li><a href="./blog-details.html">Blog Details</a></li>
                                 </ul>
                             </li> --}}
-                            <li><a href="./blog.html"style="color: white;">Blog</a></li>
-                            <li><a href="./contact.html"style="color: white;">Contact</a></li>
+                            <li><a href="#"style="color: white;">Blog</a></li>
+                            <li><a href="#"style="color: white;">Contact</a></li>
                         </ul>
                     </nav>
                 </div>

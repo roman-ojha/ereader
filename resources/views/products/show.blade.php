@@ -9,7 +9,7 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="product__details__pic">
                         <div class="product__details__pic__item">
-                            <img class="product__details__pic__item--large" src="img/product/details/product-details-1.jpg"
+                            <img class="product__details__pic__item--large" src="{{ asset('img/product/product-1.jpg') }}"
                                 alt="">
                         </div>
                         <div class="product__details__pic__slider owl-carousel">
