@@ -55,6 +55,7 @@ class PaymentController extends Controller
         //     'Content-Type' => 'application/pdf',
         // ];
         $filesToZip = [];
+        // Get Items from cookie
         $shoppingCart = Cart::name('shopping');
         $items = $shoppingCart->getDetails()->items;
         foreach ($items as $item) {
@@ -75,6 +76,7 @@ class PaymentController extends Controller
             }
             $zip->close();
         }
-        return response()->download($zipFilePath, $zipFileName)->deleteFileAfterSend(true);
+        // Delete Cookie
+        return response()->download($zipFilePath, $zipFileName)->deleteFileAfterSend();
     }
 }

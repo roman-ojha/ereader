@@ -76,7 +76,7 @@ class CheckoutController extends Controller
                 'price' => $item->getPrice() * 100,
             ]);
         }
-
+        // Store all item in cookie so that after payment we can able to download it
         $shoppingCart->destroy();
 
         return redirect()->route('payment.show', ['paymentGateway' => $data['payment_gateway']])->with(['orderId' => $order->tracking_id]);
