@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use ZipArchive;
 use Illuminate\Support\Str;
+use Jackiedo\Cart\Facades\Cart;
 
 class PaymentController extends Controller
 {
@@ -50,24 +51,26 @@ class PaymentController extends Controller
             'price_paid' => $data['amount'],
             'transaction_id' => $data['transaction_id'],
         ]);
-        // dd($orderPayment);
-        $headers = [
-            'Content-Type' => 'application/pdf',
-        ];
-        $filePath = storage_path('\app\public\books\book-1.pdf');
-        $filesToZip = [
-            $filePath,
-            $filePath,
-            // zip required pdf files
-        ];
+        // $headers = [
+        //     'Content-Type' => 'application/pdf',
+        // ];
+        $filesToZip = [];
+        $shoppingCart = Cart::name('shopping');
+        $items = $shoppingCart->getDetails()->items;
+        foreach ($items as $item) {
+            $file = [
+                'path' => storage_path('\app\data\book.pdf'),
+                'name' => $item->options->slug,
+            ];
+            array_push($filesToZip, $file);
+        }
         $zip = new ZipArchive;
         $zipFileName = 'Ereader-' . $data['transaction_id'] . '.zip';
-        $zipFilePath = storage_path("\\app\\temp\\" . $zipFileName);
+        $zipFilePath = storage_path("\\app\\data\\" . $zipFileName);
         if ($zip->open($zipFilePath, ZipArchive::CREATE | ZipArchive::OVERWRITE)) {
             foreach ($filesToZip as $file) {
-                if (File::exists($file)) {
-                    $fileName = $file;
-                    $zip->addFile($file, basename(str_replace('.pdf', '', $file) . '-' . md5($file . Str::random(5)) . '.pdf'));
+                if (File::exists($file['path'])) {
+                    $zip->addFile($file['path'], basename($file['name'] . '-' . md5($file['name'] . Str::random(5)) . '.pdf'));
                 }
             }
             $zip->close();
