@@ -41,7 +41,7 @@
                                 @foreach ($categories as $category)
                                     <li>
                                         <a class="{{ request()->getQueryString() == 'category=' . $category->slug ? 'text-primary' : '' }}"
-                                            href="?category={{ $category['slug'] }}">{{ $category['name'] }}</a>
+                                            href="?genre={{ $category['slug'] }}">{{ $category['name'] }}</a>
                                     </li>
                                 @endforeach
                             </ul>

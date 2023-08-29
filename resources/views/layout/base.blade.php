@@ -7,7 +7,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ogani | Template</title>
+    <title>Ereader</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -264,13 +264,15 @@
                         <!-- Grid column -->
                         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                             <!-- Content -->
-                            <h6 class="text-uppercase fw-bold">Company name</h6>
+                            <h6 class="text-uppercase fw-bold">Ereader</h6>
                             <hr class="mb-4 mt-0 d-inline-block mx-auto"
                                 style="width: 60px; background-color: #7c4dff; height: 2px" />
                             <p>
-                                Here you can use rows and columns to organize your footer
-                                content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                                elit.
+                                Place to find all the list of e-books
+                                Add them to cart
+                                Minimal Pay amount
+                                Get required e-books in Pdf format
+                                Read you desired book
                             </p>
                         </div>
                         <!-- Grid column -->
@@ -282,16 +284,16 @@
                             <hr class="mb-4 mt-0 d-inline-block mx-auto"
                                 style="width: 60px; background-color: #7c4dff; height: 2px" />
                             <p>
-                                <a href="#!" class="text-white">MDBootstrap</a>
+                                <a href="#!" class="text-white">Ereader Kindle</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-white">MDWordPress</a>
+                                <a href="#!" class="text-white">Ereader Notion</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-white">BrandFlow</a>
+                                <a href="#!" class="text-white">Ereader Manager</a>
                             </p>
                             <p>
-                                <a href="#!" class="text-white">Bootstrap Angular</a>
+                                <a href="#!" class="text-white">Ereader Coud</a>
                             </p>
                         </div>
                         <!-- Grid column -->
@@ -327,12 +329,12 @@
                                     style="margin-right: 10px;" viewBox="0 0 15 15">
                                     <path fill="currentColor"
                                         d="M7.825.12a.5.5 0 0 0-.65 0L0 6.27v7.23A1.5 1.5 0 0 0 1.5 15h4a.5.5 0 0 0 .5-.5v-3a1.5 1.5 0 0 1 3 0v3a.5.5 0 0 0 .5.5h4a1.5 1.5 0 0 0 1.5-1.5V6.27L7.825.12Z" />
-                                </svg> New York, NY 10012, US</p>
+                                </svg> Kathmandu, KTM 44600, Nepal</p>
                             <p><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
                                     style="margin-right: 10px;" viewBox="0 0 24 24">
                                     <path fill="currentColor"
                                         d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5l-8-5V6l8 5l8-5v2z" />
-                                </svg> info@example.com</p>
+                                </svg> roman@ereader.com</p>
                             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24">
                                     <g fill="currentColor">
@@ -341,7 +343,7 @@
                                         <path
                                             d="M17.543 9.704A5.99 5.99 0 0 1 18 12h-1.8A4.199 4.199 0 0 0 12 7.8V6a6 6 0 0 1 5.543 3.704Z" />
                                     </g>
-                                </svg> + 01 234 567 88</p>
+                                </svg> +977 98xx43xx43</p>
                             <p><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
                                     viewBox="0 0 32 32">
                                     <g fill="none" stroke="currentColor" stroke-linecap="round"
@@ -350,7 +352,7 @@
                                             d="M3 12c0-7 7-7 13-7s13 0 13 7c0 8-7-1-7-1H10s-7 9-7 1Zm8 2s-5 5-5 14h20c0-9-5-14-5-14H11Z" />
                                         <circle cx="16" cy="21" r="4" />
                                     </g>
-                                </svg> + 01 234 567 89</p>
+                                </svg> +01 4321234</p>
                         </div>
                         <!-- Grid column -->
                     </div>

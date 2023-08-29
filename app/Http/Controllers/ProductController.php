@@ -10,7 +10,7 @@ class ProductController extends Controller
 {
     public function index(Request $request)
     {
-        $filterCategorySlug = $request->get('category');
+        $filterCategorySlug = $request->get('genre');
         $categories = Category::where('slug', $filterCategorySlug)->first();
         if ($categories) {
             $products = $categories->products()->get();

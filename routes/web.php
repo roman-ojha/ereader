@@ -24,8 +24,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', [AuthController::class, 'login']);
-Route::get('/categories', [CategoryController::class, 'get']);
+// Route::get('/login', [AuthController::class, 'login']);
+// Route::get('/categories', [CategoryController::class, 'get']);
 
 // Route::get('/home', [HomeController::class, 'index']);
 Route::get('/', [ProductController::class, 'index']);
