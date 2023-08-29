@@ -62,7 +62,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
                             <a href="/book/{{ $product->slug }}">
-                                <div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpg"
+                                <div class="product__item__pic set-bg" data-setbg="{{ $product->image_url }}"
                                     style="border-radius: 8px;">
                                 </div>
                             </a>

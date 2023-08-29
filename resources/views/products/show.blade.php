@@ -9,8 +9,7 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="product__details__pic">
                         <div class="product__details__pic__item">
-                            <img class="product__details__pic__item--large" src="{{ asset('img/product/product-1.jpg') }}"
-                                alt="">
+                            <img class="product__details__pic__item--large" src="{{ $product->image_url }}" alt="">
                         </div>
                         <div class="product__details__pic__slider owl-carousel">
                             <img data-imgbigurl="img/product/details/product-details-2.jpg"
@@ -36,11 +35,17 @@
                             <span>(18 reviews)</span>
                         </div>
                         <div class="product__details__price">{{ $product->formatted_amount() }}</div>
+                        <div style="display: flex">
+                            <b>Author:&nbsp;</b>
+                            <p>{{ $product->author }}</p> <b>&nbsp;|&nbsp;</b>
+                            <b>Page No.:&nbsp;</b>
+                            <p>{{ $product->page }}</p>
+                        </div>
                         <p>{{ $product->description }}</p>
                         <form method="POST" action="/cart">
                             @csrf
                             <input type="hidden" name="product_id" value="{{ $product->id }}" />
-                            <div class="product__details__quantity">
+                            <div class="product__details__quantity" hidden>
                                 <div class="quantity">
                                     <div class="pro-qty">
                                         <input type="text" name="quantity" value="1">

@@ -12,11 +12,23 @@ class CartController extends Controller
     {
         $product = Product::find($request->product_id);
         $shoppingCart = Cart::name('shopping');
+        $items = $shoppingCart->getDetails()->items;
+        // dd($items);
+        foreach ($items as $item) {
+            $itemSlug = $item->options->slug;
+            if ($product->slug == $itemSlug) {
+                return back();
+            }
+        }
         $shoppingCart->addItem([
             'id'       => $product->id,
             'title'    => $product->name,
             'quantity' => (int)$request->quantity,
             'price'    => $product->price / 100,
+            'options' => [
+                'image_url' => $product->image_url,
+                'slug' => $product->slug,
+            ]
         ]);
         return back();
     }

@@ -12,22 +12,26 @@
                                 <tr>
                                     <th class="shoping__product">Book</th>
                                     <th>Price</th>
-                                    <th>Quantity</th>
-                                    <th>Total</th>
+                                    {{-- <th>Quantity</th> --}}
                                     <th></th>
+                                    <th>Total</th>
+                                    {{-- <th></th> --}}
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($items as $hash => $item)
                                     <tr>
                                         <td class="shoping__cart__item">
-                                            <img src="img/cart/cart-1.jpg" alt="">
-                                            <h5>{{ $item->getTitle() }}</h5>
+                                            <a href="/book/{{ $item->getDetails()->options->slug }}">
+                                                <img src="{{ $item->getDetails()->options->image_url }}" alt=""
+                                                    width="50px" height="75px" style="border-radius: 4px;">
+                                                <h5>{{ $item->getTitle() }}</h5>
+                                            </a>
                                         </td>
                                         <td class="shoping__cart__price">
                                             Rs. {{ $item->getPrice() }}
                                         </td>
-                                        <td class="shoping__cart__quantity">
+                                        <td class="shoping__cart__quantity" style="visibility: hidden">
                                             <div class="quantity">
                                                 <div class="pro-qty">
                                                     <input type="text" value="{{ $item->getQuantity() }}">
