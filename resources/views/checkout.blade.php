@@ -21,6 +21,38 @@
                 <form action="{{ route('checkout.store') }}" method="POST">
                     @csrf
                     <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="checkout__order" style="border-radius: 8px;">
+                                <h4>Your Order</h4>
+                                <div class="checkout__order__products">Products <span>Total</span></div>
+                                <ul>
+                                    @foreach ($items as $item)
+                                        <li>{{ strlen($item->getTitle()) > 25 ? substr($item->getTitle(), 0, 25) . '...' : $item->getTitle() }}<span>Rs.
+                                                {{ $item->getPrice() }}</span></li>
+                                    @endforeach
+                                </ul>
+                                {{-- <div class="checkout__order__subtotal">Subtotal <span>Rs. {{ $subTotal }}</span></div> --}}
+                                <div class="checkout__order__total">Total <span>Rs. {{ $total }}</span></div>
+
+                                {{-- <div class="checkout__input__checkbox">
+                                    <label for="payment">
+                                        Cash on Delivery
+                                        <input type="radio" id="payment" name="payment_gateway" value="cod"
+                                            @if (old('payment_gateway') == 'cod') checked @endif />
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div> --}}
+                                <div class="checkout__input__checkbox">
+                                    <label for="khalti" hidden>
+                                        Khalti
+                                        <input type="radio" id="khalti" name="payment_gateway" value="khalti"
+                                            id="khalti" checked />
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <button type="submit" class="site-btn" style="border-radius: 8px;">PLACE ORDER</button>
+                            </div>
+                        </div>
                         <div class="col-lg-8 col-md-6">
                             <div class="row">
                                 <div class="col-lg-6">
@@ -49,37 +81,6 @@
                                 <small>{{ $errors->first('email') }}</small>
                             </div>
                             <div class="checkout__input">
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="checkout__order">
-                                <h4>Your Order</h4>
-                                <div class="checkout__order__products">Products <span>Total</span></div>
-                                <ul>
-                                    @foreach ($items as $item)
-                                        <li>{{ $item->getTitle() }}<span>Rs. {{ $item->getPrice() }}</span></li>
-                                    @endforeach
-                                </ul>
-                                <div class="checkout__order__subtotal">Subtotal <span>Rs. {{ $subTotal }}</span></div>
-                                <div class="checkout__order__total">Total <span>Rs. {{ $total }}</span></div>
-
-                                {{-- <div class="checkout__input__checkbox">
-                                    <label for="payment">
-                                        Cash on Delivery
-                                        <input type="radio" id="payment" name="payment_gateway" value="cod"
-                                            @if (old('payment_gateway') == 'cod') checked @endif />
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div> --}}
-                                <div class="checkout__input__checkbox">
-                                    <label for="khalti" hidden>
-                                        Khalti
-                                        <input type="radio" id="khalti" name="payment_gateway" value="khalti"
-                                            id="khalti" checked />
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </div>
-                                <button type="submit" class="site-btn" style="border-radius: 8px;">PLACE ORDER</button>
                             </div>
                         </div>
                     </div>

@@ -42,7 +42,11 @@
                                             Rs. {{ $item->getDetails()->total_price }}
                                         </td>
                                         <td class="shoping__cart__item__close" onclick="deleteCart('{{ $hash }}')">
-                                            <span class="icon_close"></span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" color="#dc3545" style="cursor: pointer">
+                                                <path fill="currentColor"
+                                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                            </svg>
                                             <form method="POST" id="deleteForm-{{ $hash }}" action="/cart/remove">
                                                 @csrf
                                                 @method('DELETE')
@@ -79,7 +83,7 @@
                     <div class="shoping__checkout">
                         <h5>Cart Total</h5>
                         <ul>
-                            <li>Subtotal <span>Rs. {{ $subTotal }}</span></li>
+                            {{-- <li>Subtotal <span>Rs. {{ $subTotal }}</span></li> --}}
                             <li>Total <span>Rs. {{ $total }}</span></li>
                         </ul>
                         <a href="/checkout" class="primary-btn">PROCEED TO CHECKOUT</a>
