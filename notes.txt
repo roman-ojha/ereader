@@ -1,0 +1,13 @@
+*) Functional Requirements:
+	1. As a user, I can see all the list of e-book items.
+	2. As a user, I can see information detail about specific e-book item.
+	3. As a user, I can add e-book to cart.
+	4. As a user, I can see all the list of e-book items that had been added to the cart.
+	5. As a user, I can checkout the added item from the '/cart' page.
+	6. As a user, I can pay the order item using 'khalti' payment gateway system.
+	7. As a user, I will get be able to download the '.zip' file containing all the e-books item.
+	8. As a Admin, I can add/remove new book to the database.
+
+
+
+E-reader is the e-commerce platform where use can find the list of e-book that they want to read and then add them to cart and then they can checkout after that they can download the list of e-books that they checkout by paying using 'khalti' payment gateway service in '.zip' format and all those e-books will be on '.pdf' format which they can easily be able to read.
